@@ -25,13 +25,16 @@ By successfully completing this lab, we deepened our understanding of app develo
 
 Start with the assembly built in Lab 6 (link?) Below is a reference photo of this circuit, see Figure 1.1. 
 
-insert image of previous circuit
+![image](https://github.com/user-attachments/assets/c5fee9cf-e6c0-4b1e-a636-36c440677410)
+
 
 Use hook and loop tape to attach the motors to the bottom side of the Arduino mounting board. Attach wheels to each motor. Also using hook and loop tape, mount the battery pack to the underside of the Arduino mounting board. Additionally, attach a binder clip to the front of the board, this will prevent the battery pack from touching the floor. The completed setup is seen in Figures 2.1 and 2.2.
 
-insert image 1
+![image](https://github.com/user-attachments/assets/8e587fbd-1faa-49de-b255-5108d4e5e099)
 
-insert image 2
+
+![image](https://github.com/user-attachments/assets/cae1b6ce-4142-409d-a771-2a54aac102fa)
+
 
 ### Part 2 - Develop the App
 
@@ -44,7 +47,8 @@ To initiate Bluetooth capabilities, wire the HC-05 Bluetooth UART module on an u
 ![image](https://github.com/user-attachments/assets/5c2a97f1-b1f8-4e12-95c7-f92771bec711)
 <p align="left"><em>Figure 3.1: Schematic of final circuit. Source: Explore Embedded "Setting up Bluetooth HC-05 with Arduino" </em></p>
 
-image of circuit
+![image](https://github.com/user-attachments/assets/ae52c8a1-55c7-4d41-b864-2b79849a8337)
+
 
 
 # Test Equipment
