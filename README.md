@@ -23,18 +23,19 @@ By successfully completing this lab, we deepened our understanding of app develo
 
 ### Part 1 - Assemble and Test Your Robot
 
-Start with the assembly built in Lab 6 (link?) Below is a reference photo of this circuit, see Figure 1.1. 
+Start with the assembly built in Lab 6 [Link Text]([https://example.com](https://github.com/audreysuit/BAE305-SP25-Lab6)) Below is a reference photo of this circuit, see Figure 1.1. 
 
 ![image](https://github.com/user-attachments/assets/c5fee9cf-e6c0-4b1e-a636-36c440677410)
+<p align="left"><em>Figure 1.1: Image of Lab 6 assembly. </em></p>
 
 
 Use hook and loop tape to attach the motors to the bottom side of the Arduino mounting board. Attach wheels to each motor. Also using hook and loop tape, mount the battery pack to the underside of the Arduino mounting board. Additionally, attach a binder clip to the front of the board, this will prevent the battery pack from touching the floor. The completed setup is seen in Figures 2.1 and 2.2.
 
 ![image](https://github.com/user-attachments/assets/8e587fbd-1faa-49de-b255-5108d4e5e099)
-
+<p align="left"><em>Figure 2.1: Image of underside assembly. </em></p>
 
 ![image](https://github.com/user-attachments/assets/cae1b6ce-4142-409d-a771-2a54aac102fa)
-
+<p align="left"><em>Figure 2.2: Image of underside assembly. </em></p>
 
 ### Part 2 - Develop the App
 
@@ -48,7 +49,7 @@ To initiate Bluetooth capabilities, wire the HC-05 Bluetooth UART module on an u
 <p align="left"><em>Figure 3.1: Schematic of final circuit. Source: Explore Embedded "Setting up Bluetooth HC-05 with Arduino" </em></p>
 
 ![image](https://github.com/user-attachments/assets/ae52c8a1-55c7-4d41-b864-2b79849a8337)
-
+<p align="left"><em>Figure 3.2: Image of HC-05 Bluetooth UART module setup. </em></p>
 
 
 # Test Equipment
