@@ -8,11 +8,42 @@
 
 # Summary  
 
+This lab provided hands-on experience with mobile app development and wireless communication for remote control of a robot car. Through a series of exercises, we explored the basics of creating a simple app using MIT App Inventor 2 and integrating it with our robot hardware via Bluetooth. We began by assembling our robot and verifying its movement using serial communications from the Arduino IDE, ensuring that the motors responded correctly to basic commands. Next, we developed an app that enabled us to send movement commands—forward, backward, turning, and varying speeds—to the robot through a user-friendly interface. Finally, we integrated a Bluetooth module (HC-05) to replace wired communication, demonstrating how to establish a wireless link between an Android device and the robot.
+
+By successfully completing this lab, we deepened our understanding of app development, embedded system interfacing, and wireless control. This experience not only reinforced our skills in Arduino programming and hardware assembly but also prepared us for more advanced projects that combine mobile applications with real-time robotic control.
 
 # Materials
 
+-Computer running Arduino IDE and Chrome Browser
+-Smartphone running Android OS with MIT AI2 Companion app installed
+-Sparkfun Inventor's Kit: RedBoard, Ultrasonic sensor, two motors, motor driver, two wheels, battery pack, hook and loop tape, wires
+-HC-05 Bluetooth UART Module
 
-# Assembly Procedures  
+# Assembly Procedures 
+
+### Part 1 - Assemble and Test Your Robot
+
+Start with the assembly built in Lab 6 (link?) Below is a reference photo of this circuit, see Figure 1.1. 
+
+insert image of previous circuit
+
+Use hook and loop tape to attach the motors to the bottom side of the Arduino mounting board. Attach wheels to each motor. Also using hook and loop tape, mount the battery pack to the underside of the Arduino mounting board. Additionally, attach a binder clip to the front of the board, this will prevent the battery pack from touching the floor. The completed setup is seen in Figures 2.1 and 2.2.
+
+insert image 1
+
+insert image 2
+
+### Part 2 - Develop the App
+
+No further physical assembly is required for this section of the lab.
+
+### Part 3 - Wireless Remote
+
+To initiate Bluetooth capabilities, wire the HC-05 Bluetooth UART module on an unused area of the breadboard. Build according to the schematic and image shown below (Figures 3.1 and 3.2.) Ensure Rx is connected to Pin 2 and Tx is connected to Pin 3, and include the 1kΩ-3kΩ voltage divider. 
+
+![image](https://github.com/user-attachments/assets/5c2a97f1-b1f8-4e12-95c7-f92771bec711)
+
+image of circuit
 
 
 # Test Equipment
