@@ -23,7 +23,7 @@ By successfully completing this lab, we deepened our understanding of app develo
 
 ### Part 1 - Assemble and Test Your Robot
 
-Start with the assembly built in Lab 6 [Link Text]([https://example.com](https://github.com/audreysuit/BAE305-SP25-Lab6)) Below is a reference photo of this circuit, see Figure 1.1. 
+Start with the assembly built in [Lab 6](https://github.com/audreysuit/BAE305-SP25-Lab6)) Below is a reference photo of this circuit, see Figure 1.1. 
 
 ![image](https://github.com/user-attachments/assets/c5fee9cf-e6c0-4b1e-a636-36c440677410)
 <p align="left"><em>Figure 1.1: Image of Lab 6 assembly. </em></p>
