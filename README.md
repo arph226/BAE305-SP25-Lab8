@@ -42,6 +42,7 @@ No further physical assembly is required for this section of the lab.
 To initiate Bluetooth capabilities, wire the HC-05 Bluetooth UART module on an unused area of the breadboard. Build according to the schematic and image shown below (Figures 3.1 and 3.2.) Ensure Rx is connected to Pin 2 and Tx is connected to Pin 3, and include the 1kΩ-3kΩ voltage divider. 
 
 ![image](https://github.com/user-attachments/assets/5c2a97f1-b1f8-4e12-95c7-f92771bec711)
+<p align="left"><em>Figure 3.1: Schematic of final circuit. Source: Explore Embedded "Setting up Bluetooth HC-05 with Arduino" </em></p>
 
 image of circuit
 
@@ -56,7 +57,7 @@ image of circuit
 1. Ensure the robot is assembled correctly, with wheels attached to the motors and the motor driver connected to the Arduino RedBoard.
 2. Connect the battery pack and ensure it is properly placed, avoiding contact with the floor when the binder clip is installed.
 3. Open the Arduino IDE and upload the provided robot control sketch.
-4. Open the Serial Monitor in the Arduino IDE (ensure baud rate is set to 9600).
+4. Open the Serial Monitor in the Arduino IDE (ensure the baud rate is set to 9600).
 5. In the Serial Monitor, type the following commands to control the robot:
    - "f" for forward.
    - "b" for backward.
@@ -329,7 +330,7 @@ void parseData() {
 }
 
 ```
-<p align="left"><em> Program 1: The above program is for controlling a robot via Bluetooth using an Arduino and the MIT AI2 Companion App. Using buttons on an app created in the MIT program, the robot can move forward, backward, left, right, and at different speeds. Additionally, the robot is equipped with an ultrasonic sensor for obstacle detection Since we did not have an Android, we had to use Dr. Jarros phone, and were not able to complete the full project.   </em></p>
+<p align="left"><em> Program 1: The above program is for controlling a robot via Bluetooth using an Arduino and the MIT AI2 Companion App. Using buttons on an app created in the MIT program, the robot can move forward, backward, left, right, and at different speeds. Additionally, the robot is equipped with an ultrasonic sensor for obstacle detection. Since we did not have an Android, we had to use Dr. Jarros's phone and were not able to complete the full project.   </em></p>
 
 ![Screenshot 2025-03-31 182353](https://github.com/user-attachments/assets/59a6706f-3cf7-4d69-bb3e-41e1da2baeb8)
 
@@ -342,5 +343,14 @@ void parseData() {
 
 # Discussion
 
+Discussion Question 1 - In Lab 6, we found out what was the minimum speed that will move the motors. What is the minimum speed that will move the complete car?
+
+We found the minimum speed to move the car is 75 rpm.
 
 # Conclusion
+
+Lab 8 provided a comprehensive introduction to mobile app development for remote robotic control, effectively bridging software programming with embedded hardware applications. Through the use of MIT App Inventor 2, we designed and built a user-friendly Android app that communicated with our robot via Bluetooth. Building on our previous work in Lab 6, we first confirmed proper robot assembly and motor control using serial commands and then transitioned to wireless control by integrating the HC-05 Bluetooth module.
+
+The lab allowed us to explore essential concepts in app development, including UI design, serial communication, and command parsing while reinforcing our understanding of real-time embedded systems. We successfully programmed the robot to respond to directional commands and variable speeds, with the system reliably halting when an obstacle was detected. Notably, our tests confirmed that the complete car requires a minimum motor speed of 75 rpm to initiate movement.
+
+Overall, this lab deepened our knowledge of wireless interfacing and mobile app development, providing valuable experience that will serve as a foundation for more advanced projects integrating robotics and remote control technologies.
