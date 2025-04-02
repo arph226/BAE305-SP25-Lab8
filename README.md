@@ -58,6 +58,9 @@ To initiate Bluetooth capabilities, wire the HC-05 Bluetooth UART module on an u
 
 
 # Test Procedures
+
+NOTE: All AppInventor blocks created in this lab are shown in the Test Results in Figures 4-7. The Arduino code is shown in Program 1. 
+
 ## Part 1: Assemble and Test Your Robot
 1. Ensure the robot is assembled correctly, with wheels attached to the motors and the motor driver connected to the Arduino RedBoard.
 2. Connect the battery pack and ensure it is properly placed, avoiding contact with the floor when the binder clip is installed.
@@ -363,16 +366,16 @@ void parseData() {
 <p align="left"><em> Program 1: The above program is for controlling a robot via Bluetooth using an Arduino and the MIT AI2 Companion App. Using buttons on an app created in the MIT program, the robot can move forward, backward, left, right, and at different speeds. Additionally, the robot is equipped with an ultrasonic sensor for obstacle detection. Since we did not have an Android, we had to use Dr. Jarros's phone and were not able to complete the full project.   </em></p>
 
 ![Screenshot 2025-03-31 182353](https://github.com/user-attachments/assets/59a6706f-3cf7-4d69-bb3e-41e1da2baeb8)
-<p align="left"><em> Figure 4.1: The above image depicts the App Inventor blocks needed to control the serial communications. These blocks initialize the serial monitor at a Baud Rate of 9600, creates a button to open the serial monitor through the app (Open_Serial), and uses a clock to read data from the arduino when the serial monitor is open (ReadFromArduino). Serial1 is the name of the serial connectivity component. These blocks then translate to an User Interface on an app. The blocks also send this command to the RedBoard. </em></p>
+<p align="left"><em> Figure 4: The above image depicts the App Inventor blocks needed to control the serial communications. These blocks initialize the serial monitor at a Baud Rate of 9600, creates a button to open the serial monitor through the app (Open_Serial), and uses a clock to read data from the arduino when the serial monitor is open (ReadFromArduino). Serial1 is the name of the serial connectivity component. These blocks then translate to an User Interface on an app. The blocks also send this command to the RedBoard. </em></p>
 
 ![image](https://github.com/user-attachments/assets/bc9b2d88-b275-41f7-8060-d7ebe8239a1c)
-<p align="left"><em> Figure 4.1: The above image shows the App Inventor blocks needed to create buttons for 4 different directions (forward, backward, left, and right) and 3 different speeds (fast, medium, and slow).  It does this by communicating to the Serial Monitor and the RedBoard the commands to move in the directions and speeds necessary given the commands required by the initial Arduino code.  </em></p>
+<p align="left"><em> Figure 5: The above image shows the App Inventor blocks needed to create buttons for 4 different directions (forward, backward, left, and right) and 3 different speeds (fast, medium, and slow).  It does this by communicating to the Serial Monitor and the RedBoard the commands to move in the directions and speeds necessary given the commands required by the initial Arduino code.  </em></p>
 
 ![Screenshot 2025-03-31 182931](https://github.com/user-attachments/assets/ec383f69-0e4b-471a-b302-5eec565a0157)
-<p align="left"><em> Figure 4.1: The above image shows the App Inventor Vlocks necessary to initialize Bluetooth control and configuration. The BluetoothClient allows to send data via bluetooth, the ListPicker allows for selection of bluetooth device, and the label shows the status of the bluetooth connection. This initializes Bluetooth connection and gives permission for bluetooth to be used and stores values in TinyDB1.    </em></p>
+<p align="left"><em> Figure 6: The above image shows the App Inventor Vlocks necessary to initialize Bluetooth control and configuration. The BluetoothClient allows to send data via bluetooth, the ListPicker allows for selection of bluetooth device, and the label shows the status of the bluetooth connection. This initializes Bluetooth connection and gives permission for bluetooth to be used and stores values in TinyDB1.    </em></p>
 
 ![image](https://github.com/user-attachments/assets/c56a4b67-445d-47c7-9230-e656b85901ae)
-<p align="left"><em> Figure 4.1: The above image shows how blocks in App Inventor alert the app user that the Bluetooth is connected and creates a button that communicates via bluetooth to move the car forward.  </em></p>
+<p align="left"><em> Figure 7: The above image shows how blocks in App Inventor alert the app user that the Bluetooth is connected and creates a button that communicates via bluetooth to move the car forward.  </em></p>
 
 # Discussion
 
