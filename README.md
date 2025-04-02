@@ -70,36 +70,61 @@ To initiate Bluetooth capabilities, wire the HC-05 Bluetooth UART module on an u
    -  "l" for left turn.
    -  "s" for stop.
 6. Verify that the robot responds correctly by moving forward, backward, turning right, and turning left based on the serial commands.
-7. Test each direction at various speeds, making sure the robot moves as expected.
-   - The robot should respond to commands by moving in the appropriate direction. Speed should adjust based on the commands sent.
+7. Determine the minimum speed required to move the fully assembled robot (ours was 75 RPM)
 
 ## Part 2: Develop the App
 Test Setup:
-1. Ensure the app has been developed in App Inventor and is installed on the Android phone.
-2. The robot should be assembled and connected to the Arduino with the correct wiring and motor driver.
-3. The Bluetooth module (HC-05) should be connected to the Arduino and be in pairing mode.
-4. Open the App on the Android phone.
-5. Pair the phone with the HC-05 Bluetooth module:
+1. Ensure the app has been developed in App Inventor and is installed on the Android phone. Be sure to login to save progress.
+2. Create a new project, naming it uniquely with team members' names.
+3. In the Designer environment:
+   - Add a button to initialize serial communications.
+   - Insert a label to display communication data received from the Arduino.
+   - Include UI elements (buttons/sliders) to control forward, backward, right, and left movements at three different speeds.
+   - Add a Serial component from the Connectivity section.
+   - Add a Clock component from the Sensors section.
+4. Switch to the Blocks environment:
+   - Implement the block structure to establish serial communication upon pressing the initialization button.
+   - Use the “call serialObject.WriteSerial.data” block to send movement commands to the RedBoard via serial communication.
+5. Build the app:
+   - Select Build > Android App (.apk)
+   - Scan the QR code to install the app on an Android device.
+   - Test the app using a USB-C to USB-A adapter and an Arduino cable to connect the phone to the RedBoard.
+5. Power the robot with the battery pack and test remote control functionality.
+6. Open the App on the Android phone.
+7. Pair the phone with the HC-05 Bluetooth module:
     - Use the ListPicker in the app to select the paired Bluetooth device.
     - Check the Bluetooth status label to verify the connection.
     - Press the Initialize Serial Communication button in the app.
-6. Test each control button in the app (forward, backward, right, left, and stop)
-7. Adjust the speed using the speed control slider or buttons and verify that the robot's movement speed changes accordingly.
+8. Test each control button in the app (forward, backward, right, left, and stop)
+9. Adjust the speed using the speed control slider or buttons and verify that the robot's movement speed changes accordingly.
     - The robot should respond to commands from the app by moving in the correct direction.
     - The speed should be adjustable via the app, and the robot's movement should correspond to the set speed.
 
 ## Part 3: Wireless Remote
-1. Ensure the Bluetooth module (HC-05) is properly connected to the Arduino.
+1. Ensure the Bluetooth module (HC-05) is properly connected to the Arduino as shown in the Assembly Procedures
 2. Verify that the Android phone is paired with the HC-05 Bluetooth module.
-3. Ensure the Arduino sketch is modified correctly to receive Bluetooth commands and control the robot's direction and speed.
-4. Open the App on the Android phone.
+3. Modify the Arduino code:
+   - Include the setup, loop, and function code from the instructor’s GitHub (Lab-Template repository).
+   - Ensure the botDirection and botSpeed variables are properly updated.
+   - Modify if statements to incorporate botDir properly.
+4. Modify the App in App Inventor 2:
+   - Save a copy of the previous app with a descriptive name.
+   - In the Designer environment:
+      - Add a BluetoothClient component from the Connectivity section.
+      - Insert a ListPicker for Bluetooth device selection.
+      - Add a Label to display Bluetooth connection status.
+   - In the Blocks environment:
+      - Implement the block structure for Bluetooth device selection and connection.
+      - Replace all “call serialObject.WriteSerial” blocks with “call BluetoothClient.SendText” blocks.
+      - Append a newline character (\n) to each command to signal command completion to the Arduino.
+5. Test the Bluetooth-controlled system and demonstrate its operation to the instructor.
+5. Open the App on the Android phone.
     - In the app, use the ListPicker to select the paired Bluetooth device.
     - Check the Bluetooth status label to verify the connection status.
     - Press each control button (forward, backward, right, left, stop) in the app
     - Test speed control using the app's user interface and ensure that the robot's speed changes accordingly.
-5. The robot should respond to Bluetooth commands correctly.
-6. The Bluetooth connection should remain stable throughout the test
-7. The robot should stop when the stop command is sent.
+6. The robot should respond to Bluetooth commands correctly.
+7. The Bluetooth connection should remain stable throughout the test
 8. NOTE: the obstacle avoidance components of the code should still work when something is blocking the robot. Testing was done by placing a box <20cm from the robot. The code should stop and not complete any other commands until the object is moved.
 
 
@@ -338,13 +363,16 @@ void parseData() {
 <p align="left"><em> Program 1: The above program is for controlling a robot via Bluetooth using an Arduino and the MIT AI2 Companion App. Using buttons on an app created in the MIT program, the robot can move forward, backward, left, right, and at different speeds. Additionally, the robot is equipped with an ultrasonic sensor for obstacle detection. Since we did not have an Android, we had to use Dr. Jarros's phone and were not able to complete the full project.   </em></p>
 
 ![Screenshot 2025-03-31 182353](https://github.com/user-attachments/assets/59a6706f-3cf7-4d69-bb3e-41e1da2baeb8)
+<p align="left"><em> Figure 4.1: The above image depicts the App Inventor blocks needed to control the serial communications. These blocks initialize the serial monitor at a Baud Rate of 9600, creates a button to open the serial monitor through the app (Open_Serial), and uses a clock to read data from the arduino when the serial monitor is open (ReadFromArduino). Serial1 is the name of the serial connectivity component. These blocks then translate to an User Interface on an app. The blocks also send this command to the RedBoard. </em></p>
 
 ![image](https://github.com/user-attachments/assets/bc9b2d88-b275-41f7-8060-d7ebe8239a1c)
+<p align="left"><em> Figure 4.1: The above image shows the App Inventor blocks needed to create buttons for 4 different directions (forward, backward, left, and right) and 3 different speeds (fast, medium, and slow).  It does this by communicating to the Serial Monitor and the RedBoard the commands to move in the directions and speeds necessary given the commands required by the initial Arduino code.  </em></p>
 
 ![Screenshot 2025-03-31 182931](https://github.com/user-attachments/assets/ec383f69-0e4b-471a-b302-5eec565a0157)
+<p align="left"><em> Figure 4.1: The above image shows the App Inventor Vlocks necessary to initialize Bluetooth control and configuration. The BluetoothClient allows to send data via bluetooth, the ListPicker allows for selection of bluetooth device, and the label shows the status of the bluetooth connection. This initializes Bluetooth connection and gives permission for bluetooth to be used and stores values in TinyDB1.    </em></p>
 
 ![image](https://github.com/user-attachments/assets/c56a4b67-445d-47c7-9230-e656b85901ae)
-
+<p align="left"><em> Figure 4.1: The above image shows how blocks in App Inventor alert the app user that the Bluetooth is connected and creates a button that communicates via bluetooth to move the car forward.  </em></p>
 
 # Discussion
 
